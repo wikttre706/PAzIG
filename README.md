@@ -12,9 +12,6 @@ przez siebie nazwą, może być to dowolna nazwa.
 3. Wejdz do utworzonego folderu i otwórz ****.exe.
 4. Miłego korzystania z aplikacji.
 
-Opis aplikacji:
-
-Po uruchomieniu *****.exe otworzy nam się aplikacja. Pokażą nam się 
 
 #### ENG ####
 
@@ -24,5 +21,3 @@ To run the application:
 2. Extract files from *******.zip to the folder which was created before.
 3. Go to a created folder where you exact the files and open ****.exe.
 4. Have fun.
-
-Application description:
