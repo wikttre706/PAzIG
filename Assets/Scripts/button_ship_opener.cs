@@ -10,7 +10,6 @@ public class button_ship_opener : MonoBehaviour
         if(Panel_ship != null)
         {
             Panel_ship.SetActive(true);
-
         }
 
     }
