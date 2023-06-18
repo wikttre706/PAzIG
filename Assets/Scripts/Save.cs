@@ -5,7 +5,7 @@ using UnityEngine;
 public class Save : MonoBehaviour
 {
 
-    // public int score1;
+    //save score
     public int score1Save;
     public int score2Save;
     public int score3Save;
@@ -17,7 +17,12 @@ public class Save : MonoBehaviour
     public int score9Save;
     public int score10Save;
 
-    // Start is called before the first frame update
+    //save sum, avg, clicks
+    public int sumSave;
+    public int clicksSave;
+
+    public int avgSave;
+
     void Start()
     {
         score1Save = PlayerPrefs.GetInt("score1Save", 0);
@@ -30,6 +35,12 @@ public class Save : MonoBehaviour
         score8Save = PlayerPrefs.GetInt("score8Save", 0);
         score9Save = PlayerPrefs.GetInt("score9Save", 0);
         score10Save = PlayerPrefs.GetInt("score10Save", 0);
+        
+        sumSave = PlayerPrefs.GetInt("sumSave", 0);
+        clicksSave = PlayerPrefs.GetInt("clicksSave", 0);
+
+        avgSave = PlayerPrefs.GetInt("avgSave", 0);
+
 
         GameObject.Find("ScoreScript").GetComponent<Score>().score1 = score1Save;
         GameObject.Find("ScoreScript").GetComponent<Score>().score2 = score2Save;
@@ -41,6 +52,11 @@ public class Save : MonoBehaviour
         GameObject.Find("ScoreScript").GetComponent<Score>().score8 = score8Save;
         GameObject.Find("ScoreScript").GetComponent<Score>().score9 = score9Save;
         GameObject.Find("ScoreScript").GetComponent<Score>().score10 = score10Save;
+
+        GameObject.Find("ScoreScript").GetComponent<Score>().sum = sumSave;
+        GameObject.Find("ScoreScript").GetComponent<Score>().clicks = clicksSave;
+
+        GameObject.Find("ScoreScript").GetComponent<Score>().avg = avgSave;
     }
 
     // Update is called once per frame
@@ -56,6 +72,11 @@ public class Save : MonoBehaviour
         score8Save = GameObject.Find("ScoreScript").GetComponent<Score>().score8;
         score9Save = GameObject.Find("ScoreScript").GetComponent<Score>().score9;
         score10Save = GameObject.Find("ScoreScript").GetComponent<Score>().score10;
+
+        sumSave = GameObject.Find("ScoreScript").GetComponent<Score>().sum;
+        clicksSave = GameObject.Find("ScoreScript").GetComponent<Score>().clicks;
+
+        avgSave = GameObject.Find("ScoreScript").GetComponent<Score>().avg;
     }
 
     public void SaveScore()
@@ -70,6 +91,12 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetInt("score8Save",score8Save);
         PlayerPrefs.SetInt("score9Save",score9Save);
         PlayerPrefs.SetInt("score10Save",score10Save);
+
+        PlayerPrefs.SetInt("sumSave",sumSave);
+        PlayerPrefs.SetInt("clicksSave",clicksSave);
+
+        PlayerPrefs.SetInt("avgSave",avgSave);
+
         PlayerPrefs.Save();
 
     }
@@ -86,6 +113,12 @@ public class Save : MonoBehaviour
         PlayerPrefs.SetInt("score8Save",score8Save);
         PlayerPrefs.SetInt("score9Save",score9Save);
         PlayerPrefs.SetInt("score10Save",score10Save);
+
+        PlayerPrefs.SetInt("sumSave",sumSave);
+        PlayerPrefs.SetInt("clicksSave",clicksSave);
+
+        PlayerPrefs.SetInt("avgSave",avgSave);
+
         PlayerPrefs.Save();
 
     }
